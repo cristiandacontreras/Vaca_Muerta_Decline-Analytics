@@ -1,6 +1,6 @@
 # --- Manejo de datos ---
 pandas==2.3.3
-numpy==2.5.1
+numpy==2.2.3
 requests==2.34.2
 
 # --- Visualización / EDA ---
