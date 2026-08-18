@@ -1,22 +1,22 @@
 # --- Manejo de datos ---
-pandas==2.3.3
-numpy==2.2.3
-requests==2.34.2
+pandas
+numpy
+requests
 
 # --- Visualización / EDA ---
-matplotlib==3.11.1
-seaborn==0.13.2
+matplotlib
+seaborn
 
 # --- Machine Learning ---
-scikit-learn==1.5.0
-scipy==1.18.0          # lo usamos para ajustar la curva de declinación (Arps)
+scikit-learn
+scipy        # lo usamos para ajustar la curva de declinación (Arps)
 
 # --- Dashboard ---
-flet==0.86.5
+flet
 
 # --- OPENIA API ---
-openai==3.0.0
-python-dotenv==1.0.1   # para leer la API key desde el archivo .env sin exponerla
+openai
+python-dotenv     # para leer la API key desde el archivo .env sin exponerla
 
 # --- Notebooks (opcional, para explorar en Jupyter) ---
-jupyter==1.0.0
+jupyter
