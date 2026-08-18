@@ -52,23 +52,23 @@ El proyecto cubre el flujo completo de un trabajo de datos real: **ingesta → l
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│  1. Ingestión     │───▶│  2. Limpieza      │───▶│  3. EDA          │
-│  (datos.gob.ar)  │    │  (pandas)         │    │  (matplotlib)    │
+│  1. Ingestión   │───▶  2. Limpieza      │───▶  3. EDA         |
+│  (datos.gob.ar) │    │  (pandas)        │    │  (matplotlib)   |
 └─────────────────┘    └──────────────────┘    └─────────────────┘
                                                           │
         ┌─────────────────────────────────────────────────┘
         ▼
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│  4. Curva de      │    │  5. Machine       │    │  6. Reporte IA   │
-│  declinación      │───▶│  Learning         │───▶│  (OpenAI API)    │
-│  (scipy, Arps)   │    │  (Random Forest)  │    │                  │
+│  4. Curva de    │    │  5. Machine      │    │  6. Reporte IA  │
+│  declinación    │───▶  Learning        │───▶ (OpenAI API)     │
+│  (scipy, Arps)  │    │  (Random Forest) │    │                 │
 └─────────────────┘    └──────────────────┘    └─────────────────┘
                                                           │
                                                           ▼
                                                 ┌─────────────────┐
-                                                │  7. Dashboard     │
-                                                │  interactivo      │
-                                                │  (Flet)          │
+                                                │  7. Dashboard   │
+                                                │  interactivo    │
+                                                │  (Flet)         │
                                                 └─────────────────┘
 ```
 
