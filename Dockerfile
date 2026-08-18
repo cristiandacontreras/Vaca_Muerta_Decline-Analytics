@@ -4,4 +4,5 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 EXPOSE 8000
-CMD ["python", "dashboard/app.py"]
+# Ejecuta la limpieza primero y luego arranca el dashboard
+CMD ["sh", "-c", "python src/data_cleaning.py && python dashboard/app.py"]
