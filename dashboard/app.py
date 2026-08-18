@@ -15,12 +15,15 @@ Cómo correrlo:
     python dashboard/app.py
 """
 
-import flet as ft
-import pandas as pd
-import matplotlib
-matplotlib.use("Agg")  # backend sin ventana propia: matplotlib solo genera la imagen, no la muestra él mismo
-import matplotlib.pyplot as plt
+import os
 from pathlib import Path
+
+import flet as ft
+import matplotlib
+import matplotlib.pyplot as plt
+import pandas as pd
+
+matplotlib.use("Agg")  # backend sin ventana propia: matplotlib solo genera la imagen, no la muestra él mismo
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 PROCESSED_FILE = BASE_DIR / "data" / "processed" / "produccion_limpia.csv"
@@ -170,3 +173,13 @@ def main(page: ft.Page):
 
 if __name__ == "__main__":
     ft.run(main)
+
+#--------------DESPLEGAR RENDER EN UN SERVIDOR----------------#
+
+def main(page: ft.Page):
+    # Tu código de flet aquí...
+    pass
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8501))
+    ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=port, host="0.0.0.0")
