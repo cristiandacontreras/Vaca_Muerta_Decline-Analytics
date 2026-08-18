@@ -1,0 +1,22 @@
+# Entorno virtual
+venv/
+__pycache__/
+*.pyc
+
+# Variables de entorno / claves secretas
+.env
+
+# Datos pesados (no conviene subir CSVs grandes a GitHub)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Notebooks - checkpoints automáticos
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+
+#Archivos pesados que no pueden ser subidos a git.
+*.pkl
