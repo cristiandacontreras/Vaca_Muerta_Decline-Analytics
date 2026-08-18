@@ -16,6 +16,7 @@ Cómo correrlo:
 """
 
 import os
+import subprocess
 from pathlib import Path
 
 import flet as ft
@@ -183,3 +184,21 @@ def main(page: ft.Page):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8501))
     ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=port, host="0.0.0.0")
+    
+
+
+
+# Ruta del archivo
+data_path = "data/processed/produccion_limpia.csv"
+
+# Si el archivo NO existe, corre el script de limpieza automáticamente
+if not os.path.exists(data_path):
+    print("Archivo no encontrado. Ejecutando limpieza...")
+    try:
+        # Esto ejecuta el script de limpieza desde dentro de la app
+        subprocess.run(["python", "src/data_cleaning.py"], check=True)
+    except (subprocess.CalledProcessError, OSError) as e:
+        print(f"Error al limpiar datos: {e}")
+
+# Ahora intentamos cargar el archivo (que ya debería existir)
+df = pd.read_csv(data_path)
